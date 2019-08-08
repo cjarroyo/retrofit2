@@ -5,7 +5,7 @@ fuente: https://www.androidauthority.com/retrofit-android-tutorial-906928/<br>
 
 caso no sincronizado<br>
  public static Retrofit getRetrofitInstance(final String uri) {<br>
-**cuando es local y el necesitas ingresar por https**
+**cuando es local y el necesitas ingresar por https**<br>
         OkHttpClient.Builder builder = new OkHttpClient().newBuilder();<br>
         OkHttpClient okHttpClient = builder.hostnameVerifier(new HostnameVerifier() {<br>
             @Override<br>
@@ -14,7 +14,7 @@ caso no sincronizado<br>
             }<br>
         }).build();<br>
 <br><br>
-**invocando a retrofit no sincronizado, lo mas simple**
+**invocando a retrofit no sincronizado, lo mas simple**<br>
         if (retrofit == null) {<br>
             retrofit = new retrofit2.Retrofit.Builder().<br>
                     baseUrl(uri).<br>
